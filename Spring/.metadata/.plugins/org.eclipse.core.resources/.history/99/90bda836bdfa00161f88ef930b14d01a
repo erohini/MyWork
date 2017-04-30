@@ -1,0 +1,6 @@
+package com.rohini.springboot.topic;
+
+public interface TopicRepository extends CrudRepository{
+
+	 
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.password">hr</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1522:orcl</property>
+        <property name="hibernate.connection.username">hr</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        
+        <mapping class="com.entity.Product"/>
+        <mapping class="com.entity.Item"/>
+        <mapping class="com.entity.Bid"/>
+        <mapping class="com.entity.Customer"/>
+        <mapping class="com.entity.Address"/>
+        <mapping class="com.entity.Category"/>
+        <mapping class="com.entity.Supplier"/>
+        <mapping class="com.entity.User"/>
+        <mapping class="com.entity.Buyer"/>
+        <mapping class="com.entity.Seller"/>
+        
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,22 @@
+package partD;
+
+import java.io.IOException;
+import java.security.SecureRandom;
+
+public class PRNG {
+	
+	public static void main(String args[]) throws IOException
+	{
+		
+		SecureRandom random = new SecureRandom();
+		StringBuilder str= new StringBuilder();
+		
+		for (long i=0; i<=10000000; i++)
+		{
+			str.append(random.nextInt(2));
+		}
+	
+	
+}}
+
+

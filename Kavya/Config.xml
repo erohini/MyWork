@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document [
+<!ENTITY otherFile SYSTEM "xmltest.xml">
+]>
+<resource>
+  <childotherFile>&otherFile;</childotherFile>
+</resource>

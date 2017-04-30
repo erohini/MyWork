@@ -1,0 +1,38 @@
+package partD;
+
+import java.io.UnsupportedEncodingException;
+import java.security.Key;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+
+import javax.crypto.KeyGenerator;
+public class PRNG {
+	
+		/*public static void main(String[] args) throws UnsupportedEncodingException {
+	  try {
+		  // SecureRandom class is initializing...
+	      SecureRandom prng = SecureRandom();
+	      String randomNum = new Integer(prng.nextInt()).toString();
+	      int num=Integer.parseInt(randomNum);
+	      System.out.println("Binary string: "+Integer.toBinaryString(num));
+	    }
+	    catch (NoSuchAlgorithmException ex) {
+	      System.err.println(ex);
+	    }
+  }*/
+	
+	public static void main(String args[])
+	{
+		SecureRandom rand = new SecureRandom();
+		StringBuilder sb= new StringBuilder();
+		for (long idx=0; idx<=100000; idx++)
+		{
+			sb.append(rand.nextInt(2));
+		}
+		System.out.println("Generated: " +sb.toString());
+		}
+	
+	
+}
+
+

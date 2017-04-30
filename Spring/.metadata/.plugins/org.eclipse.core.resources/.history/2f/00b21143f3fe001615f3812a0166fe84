@@ -1,0 +1,28 @@
+package com.rohini.app;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.rohini.app.entity.Student;
+
+@Controller
+public class StudentController {
+	
+	
+	/*@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String showLogin(ModelMap modelMap){
+		Student student=new Student();
+		modelMap.put("studentData", student);
+		return "login";
+	}*/
+	
+	@RequestMapping(value="/register", method=RequestMethod.GET)
+	public String showRegister(ModelMap modelMap){
+		Student student=new Student();
+		modelMap.put("studentdata", student);
+		return "register";
+	}
+
+}

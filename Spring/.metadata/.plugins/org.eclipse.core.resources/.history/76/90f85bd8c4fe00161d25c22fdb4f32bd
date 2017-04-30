@@ -1,0 +1,5 @@
+package com.rohini.app.controllers;
+
+public class StudentController {
+
+}

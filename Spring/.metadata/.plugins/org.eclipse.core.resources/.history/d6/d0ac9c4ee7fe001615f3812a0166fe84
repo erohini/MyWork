@@ -1,0 +1,5 @@
+package com.rohini.app.entity;
+
+public class Student {
+
+}

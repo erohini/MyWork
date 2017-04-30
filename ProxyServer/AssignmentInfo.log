@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-04-26T10:28:08</date>
+  <millis>1430058488918</millis>
+  <sequence>0</sequence>
+  <logger>info</logger>
+  <level>INFO</level>
+  <class>proxyserver.HttpProxy</class>
+  <method>run</method>
+  <thread>11</thread>
+  <message>Proxy started on port 11100</message>
+</record>

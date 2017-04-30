@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Feb 28 15:57:28 EST 2017
+org.eclipse.jst.jee.server\:mvc=C\:\\Softwares\\sts-bundle\\pivotal-tc-server-developer-3.2.2.RELEASE\\base-instance\\wtpwebapps\\mvc
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\rohini\\.m2\\repository\\org\\springframework\\spring-web\\4.0.0.RELEASE\\spring-web-4.0.0.RELEASE.jar=C\:\\Softwares\\sts-bundle\\pivotal-tc-server-developer-3.2.2.RELEASE\\base-instance\\wtpwebapps\\mvc\\WEB-INF\\lib\\spring-web-4.0.0.RELEASE.jar

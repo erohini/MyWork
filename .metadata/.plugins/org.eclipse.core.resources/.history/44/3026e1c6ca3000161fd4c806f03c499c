@@ -1,0 +1,23 @@
+package saxParserExample;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Breakfast_Menu {
+
+	private List<Breakfast> breakfastList = new ArrayList<Breakfast>();
+
+	public Breakfast_Menu() {
+		
+	}
+	
+	public List<Breakfast> getBreakfastList() {
+		return breakfastList;
+	}
+
+	public void setBreakfastList(List<Breakfast> breakfastList) {
+		this.breakfastList = breakfastList;
+	}
+	
+	
+}

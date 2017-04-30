@@ -1,0 +1,169 @@
+package majorProject;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.border.*;
+import java.rmi.*;
+import java.rmi.server.*;
+import java.util.*;
+class controller extends JPanel implements ActionListener
+{
+	JRadioButton logoff;
+	ButtonGroup bg=new ButtonGroup();
+	JButton ok;
+	JPanel p1;
+	JPanel p2;
+	JPanel p3;
+	JPanel p4;
+	Font f=new Font("Arial",Font.BOLD,16);
+	JLabel lab=new JLabel("What do you want system Manager to do?");
+	JLabel sysid=new JLabel("Enter the system id :");
+	JTextField tf1=new JTextField(15);
+	ImageIcon ok_default = new ImageIcon("icons/okbutton.gif");
+	ImageIcon ok_mouseover = new ImageIcon("icons/okbutton1.gif");
+	
+	 Color c=new Color(185,255,220);
+	 Color c1=new Color(224,226,228);
+    public controller()
+	{	
+
+		tf1.setBackground(c1);
+		p1=new JPanel();
+		p2=new JPanel();
+		p3=new JPanel();
+		p4=new JPanel();
+		p3.setLayout(new GridLayout(4,1));
+		setLayout(new GridBagLayout());
+		GridBagConstraints c1 = new GridBagConstraints();
+		setBackground(c);
+		p1.setBackground(c);
+		p2.setBackground(c);
+		p3.setBackground(c);
+		p4.setBackground(c);
+		p2.setLayout(new FlowLayout());
+		p1.setLayout(new GridLayout(5,1));
+		
+		logoff=new JRadioButton("Log off");
+		
+		logoff.setBackground(c);
+		ok=new JButton(ok_default);
+		ok.setRolloverIcon(ok_mouseover);
+		ok.setBackground(c);
+		ok.setBorder(null);
+		sysid.setFont(f);
+		p2.add(sysid);
+		p2.add(tf1);
+		c1.gridy = 0;
+		add(p2,c1);
+		 c1.gridy = 1;
+		lab.setFont(f);
+		add(lab,c1);
+		logoff.setFont(f);
+		
+		bg.add(logoff);
+		
+		p3.add(logoff);
+		c1.gridy = 2;
+		add(p3,c1);
+   	    p4.add(ok);
+		c1.gridy = 3;
+		add(p4,c1);
+		ok.addActionListener(this);
+	
+		
+		
+	}
+	public void actionPerformed(ActionEvent ae)
+		{
+		 try{ 
+		 if(ae.getSource()==ok)
+		 	{  
+			 
+	String str;
+	StringTokenizer st;
+	int ip=0;
+	byte status=0; int x=0;
+	int count=0;
+		if(tf1.getText().length()==0)
+			JOptionPane.showMessageDialog(null,"please enter system ipaddress");
+	else{
+		
+	try
+	{
+		if(!tf1.getText().equals("localhost"))
+	{
+		str=tf1.getText();
+		st=new StringTokenizer(str,".");
+		ip=Integer.parseInt(st.nextToken());
+	while(st.hasMoreTokens())
+	{
+		
+	count++;
+	int tmp=Integer.parseInt(st.nextToken());
+	if(tmp<256)
+	status=1;
+	else
+	{
+	status=0;
+	x++;	
+	}
+	}
+	}
+
+System.out.println("a");
+	if(((status==1)&&(x==0)&&(count==3))||(tf1.getText().equals("localhost")))
+	{
+	System.out.println("a");
+	if((ip>=0&&ip<=127)||(ip>=128&&ip<=191)||(ip>=192&&ip<=223)||(ip>=224&&ip<=239)||(ip>=240&&ip<=255)||(tf1.getText().equals("localhost")))
+	{
+	System.out.println("a");
+			intf intf1 =null;
+			JOptionPane jpane=new JOptionPane();
+			 int result=jpane.showConfirmDialog(null,"Are you sure to logoff the system","WARNING",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
+			 if(result==JOptionPane.YES_OPTION)
+			{
+			String url = "//" + tf1.getText() + ":1099/RObjectServer";
+			System.out.println("//" + tf1.getText() + ":1099/RObjectServer");
+			intf1 = (intf)Naming.lookup(url);
+			System.out.println("c1");
+			     
+			if(logoff.isSelected())
+					{
+                   			if(intf1.Alert("r u there")=='n')
+				intf1.logoff();
+	    		                 else
+				{
+				JOptionPane jp=new JOptionPane();
+				int res=jp.showConfirmDialog(null,"System is being used still you want to continue","WARNING",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
+				if(res==JOptionPane.YES_OPTION)
+ 				intf1.logoff();
+				}
+			}
+		}
+	
+	}
+
+else 
+JOptionPane.showMessageDialog(null,"Invalid IpAddress");
+}
+else
+JOptionPane.showMessageDialog(null,"Invalid IpAddress");
+}
+
+catch(Exception e)
+{
+JOptionPane.showMessageDialog(null,"Destination  "+tf1.getText()+"  Unreachable");
+}
+		
+			}
+		}
+		}
+catch(Exception e)
+{
+JOptionPane.showMessageDialog(null,"Destination  "+tf1.getText()+" Unreachable");
+}
+}
+		}
+		
+	

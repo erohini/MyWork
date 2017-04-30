@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 5 elements from project &apos;ProxyServer&apos;&#x0D;&#x0A;- Original project: &apos;ProxyServer&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     proxyserver.CacheControl.java&#x0D;&#x0A;     proxyserver.FileCache.java&#x0D;&#x0A;     proxyserver.HttpProxy.java&#x0D;&#x0A;     proxyserver.HttpProxyRunnable.java&#x0D;&#x0A;     proxyserver.SiteFilter.java" description="Delete elements" element1="/src&lt;proxyserver{HttpProxy.java" element2="/src&lt;proxyserver{HttpProxyRunnable.java" element3="/src&lt;proxyserver{FileCache.java" element4="/src&lt;proxyserver{CacheControl.java" element5="/src&lt;proxyserver{SiteFilter.java" elements="5" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1430060854755" subPackages="false" version="1.0"/>
+</session>

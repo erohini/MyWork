@@ -1,0 +1,155 @@
+package dfsAndbfs;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+	
+
+public class DFS_BFS
+{
+
+	public static void main(String[] args)
+	{
+		new DFS_BFS();
+	}
+	
+	int N;
+	boolean[][] G;
+	
+	
+	DFS_BFS()
+	{
+		setupGraph();
+				
+		System.out.println("------------------------------");
+		System.out.println();
+		
+		// perform a DFS on the graph
+		DFS();
+		
+		System.out.println();
+		System.out.println("------------------------------");
+		System.out.println();
+		
+		
+		// perform a BFS on the graph
+		BFS();
+		
+		System.out.println();
+		System.out.println("------------------------------");
+		System.out.println();
+		System.out.println("All done - have a good day!");
+	}
+	
+	// initial setup of the graph
+	void setupGraph()
+	{
+		// set up a graph with 8 vertices that looks like:
+		/*
+			0 --- 1        5---6
+			| \    \       |  /
+			|  \    \      | /
+			2   3----4     7
+			
+			Notice this graph has 2 components
+		*/
+		System.out.println("Enter the total number of nodes");
+		Scanner sc = new Scanner(System.in);
+		N=8;
+		G=new boolean[N][N];
+		
+		G[0][1]=G[1][0]=true;
+		G[0][2]=G[2][0]=true;
+		G[0][3]=G[3][0]=true;
+		G[1][4]=G[4][1]=true;
+		G[3][4]=G[4][3]=true;
+		G[5][6]=G[6][5]=true;
+		G[5][7]=G[7][5]=true;
+		G[6][7]=G[7][6]=true;
+	}
+	
+	// perform a DFS on the graph G
+	void DFS()
+	{
+		boolean[] V=new boolean[N];
+		
+		int numComponets=0;
+		
+		for (int i=0; i<N; ++i)
+			if (!V[i])
+			{
+				++numComponets;
+				System.out.printf("Starting a DFS for component %d starting at node %d%n",numComponets,i);
+				
+				DFS(i,V);
+			}
+		
+		System.out.println();
+		System.out.printf("Finished with DFS - found %d components.%n", numComponets);
+	}
+	
+	void DFS(int at, boolean[] V)
+	{
+		System.out.printf("At node %d in the DFS%n",at);
+		
+		V[at]=true;
+		
+		for (int i=0; i<N; ++i)
+			if (G[at][i] && !V[i])
+			{
+				System.out.printf("Going to node %d...",i);
+				DFS(i,V);
+			}
+		
+		System.out.printf("Done processing node %d%n", at);
+	}
+	
+
+	void BFS()
+	{
+		boolean[] V=new boolean[N];
+		
+		int numComponets=0;
+		
+		for (int i=0; i<N; ++i)
+			if (!V[i])
+			{
+				++numComponets;
+				System.out.printf("Starting a BFS for component %d starting at node %d%n",numComponets,i);
+				
+				BFS(i,V);
+			}
+		
+		System.out.println();
+		System.out.printf("Finished with BFS - found %d components.%n", numComponets);
+	}
+	
+	// perform a BFS starting at node start
+	void BFS(int start, boolean[] V)
+	{
+		Queue<Integer> Q=new LinkedList<Integer>(); 
+		Q.offer(start);
+		V[start]=true;
+				
+		
+		while (!Q.isEmpty())
+		{
+			int at=Q.poll();
+			System.out.printf("At node %d in the BFS%n",at);
+			
+			for (int i=0; i<N; ++i)
+				if (G[at][i] && !V[i])
+				{
+					Q.offer(i);
+					V[i]=true;
+					
+					System.out.printf("Adding node %d to the queue in the BFS%n", i);
+				}
+			
+			System.out.printf("Done processing node %d%n", at);
+		}
+		
+		System.out.printf("Finished with the BFS from start node %d%n", start);
+	}
+
+}

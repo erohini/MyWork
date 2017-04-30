@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="82" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2"/>
+	<item value="1" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn"/>
+	<item value="191" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1"/>
+	<item value="118" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0"/>
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Sum and Avg/src&amp;lt;SumAndAvg{Main.java[Main&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=perfect and deficient numbers/src&amp;lt;perfectanddeficientnumbers{Main.java[Main&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Banking Account/src&amp;lt;bankingAccount{Main.java[Main&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=card/src&amp;lt;image{ShowIconButtons.java[ShowIconButtons&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=GUI/src&amp;lt;cardgame{ShowImage.java[ShowImage&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Sneha/src&amp;lt;gamedesign{Result.java[Result&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=ProxyServer/src&amp;lt;proxyserver{HttpProxy.java[HttpProxy&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=ProxyServer/src&amp;lt;proxyserver{Jhttpp2Launcher.java[Jhttpp2Launcher&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=jdbc/src&amp;lt;jdbc{RegistrationSystem.java[RegistrationSystem&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=GUIPractice1/src&amp;lt;gui1{Gui1.java[Gui1&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Card Game/src&amp;lt;cardgame{Main.java[Main&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=part d/src&amp;lt;partD{PRNG.java[PRNG&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=samp/src&amp;lt;samp{CustomPRNG.java[CustomPRNG&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=siva/src&amp;lt;siva{LotteryPrinter.java[LotteryPrinter&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=MajorProject/src&amp;lt;majorProject{Server.java[Server&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="100" key="DIALOG_X_ORIGIN"/>
+			<item value="8" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+</section>

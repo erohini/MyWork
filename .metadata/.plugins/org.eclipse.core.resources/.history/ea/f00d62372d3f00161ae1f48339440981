@@ -1,0 +1,13 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%-- 
+<c:set var="a" value="200"></c:set>
+<c:if test="${a>150}">
+	a value is greater than 150
+</c:if> 
+--%>
+<c:forEach items="${itemsList}" var="n">
+	ItemId: ${item.id}
+	ItemIName: ${item.name}
+	ItemPrice: ${item.price}
+	
+</c:forEach>

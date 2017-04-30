@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;FirstWebProject/src&apos;&#x0D;&#x0A;- Original project: &apos;AJDBCProj&apos;&#x0D;&#x0A;- Destination element: &apos;FirstWebProject/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     AJDBCProj/src/com.dao&#x0D;&#x0A;     AJDBCProj/src/com.vo" description="Copy packages" destination="=FirstWebProject/src" element1="/src&lt;com.dao" element2="/src&lt;com.vo" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1465488945329" version="1.0"/>
+</session>

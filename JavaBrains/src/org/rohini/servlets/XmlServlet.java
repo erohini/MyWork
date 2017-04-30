@@ -1,0 +1,44 @@
+package org.rohini.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class XmlServlet extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		String userName=request.getParameter("username");
+		//String id=request.getParameter("id");
+		HttpSession session= request.getSession();
+		if(userName!="" && userName!=null){
+			session.setAttribute("savedUser",userName);
+		}
+		//out.println("Helloooo from GET method "+userName);
+		out.println("Request parameter has username as "+userName);
+		out.println("Session parameter has username as "+(String)session.getAttribute("savedUser"));
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		String userName=request.getParameter("username");
+		String fullName=request.getParameter("fullname");
+		//String id=request.getParameter("id");
+		String profession=request.getParameter("profession");
+		//String location = request.getParameter("location");
+		String[] location=request.getParameterValues("location");
+		out.println("Helloooo from POST method... "+userName+"\n"+" your full name is: "+fullName);
+		out.println(" Your Profession: "+profession);
+		out.println("Location: "+location.length);
+		for(int i=0;i<location.length;i++){
+			out.println(location[i]);
+		}
+	}
+}

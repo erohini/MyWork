@@ -1,0 +1,5 @@
+package com.rohini.springboot.topic;
+
+public class TopicRepository {
+
+}

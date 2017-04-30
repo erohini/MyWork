@@ -1,0 +1,9 @@
+package com.rohini.springboot.course;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface CourseRepository extends CrudRepository<Course, String>{
+
+	public List<Course> getCoursesByTopic(String topicId);
+	 
+}

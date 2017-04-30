@@ -1,0 +1,16 @@
+package com.rohini.app.entity;
+
+public class Student {
+
+	private String userName;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password;
+	
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}

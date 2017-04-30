@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order_details>
+<orderStatus>
+	<fulfillmentSystemOrderId>123121</fulfillmentSystemOrderId>
+	<orderState>SHIPPPEd</orderState>
+	<originatingSystemOrderID>493234324</originatingSystemOrderID>
+	<shipment>
+		<shipper>USPS</shipper>
+	</shipment>
+</orderStatus>
+
+<orderStatus>
+	<fulfillmentSystemOrderId>1433121</fulfillmentSystemOrderId>
+	<orderState>SHIPPPEd</orderState>
+	<originatingSystemOrderID>493233324</originatingSystemOrderID>
+	<shipment>
+		<shipper>USPS</shipper>
+	</shipment>
+</orderStatus>
+
+<orderStatus>
+	<fulfillmentSystemOrderId>133121</fulfillmentSystemOrderId>
+	<orderState>SHIPPPEd</orderState>
+	<originatingSystemOrderID>493234444</originatingSystemOrderID>
+	<shipment>
+		<shipper>USPS</shipper>
+	</shipment>
+</orderStatus>
+
+<orderStatus>
+	<fulfillmentSystemOrderId>123144</fulfillmentSystemOrderId>
+	<orderState>SHIPPPEd</orderState>
+	<originatingSystemOrderID>493232224</originatingSystemOrderID>
+	<shipment>
+		<shipper>USPS</shipper>
+	</shipment>
+</orderStatus>
+
+<orderStatus>
+	<fulfillmentSystemOrderId>123144</fulfillmentSystemOrderId>
+	<orderState>SHIPPPEd</orderState>
+	<originatingSystemOrderID>1493232224</originatingSystemOrderID>
+	<shipment>
+		<shipper>USPS</shipper>
+	</shipment>
+</orderStatus>
+
+<orderStatus>
+	<fulfillmentSystemOrderId>123166</fulfillmentSystemOrderId>
+	<orderState>SHIPPPEd</orderState>
+	<originatingSystemOrderID>493231124</originatingSystemOrderID>
+	<shipment>
+		<shipper>USPS</shipper>
+	</shipment>
+</orderStatus>
+</order_details>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.Converter&apos; to &apos;SoapDynamicProject/src&apos;&#x0D;&#x0A;- Original project: &apos;ASampleServiceProj&apos;&#x0D;&#x0A;- Destination element: &apos;SoapDynamicProject/src&apos;&#x0D;&#x0A;- Original element: &apos;ASampleServiceProj/src/com.Converter&apos;" description="Copy package" destination="=SoapDynamicProject/src" element1="/src&lt;com.Converter" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1474918196769" version="1.0"/>
+</session>
